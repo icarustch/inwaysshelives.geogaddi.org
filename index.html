@@ -1,187 +1,190 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>In ways, she lives</title>
+<meta charset="UTF-8">
+<title>In ways, she lives</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+@font-face {
+  font-family: 'ITC Avant Garde Gothic Std Extra Light';
+  src: url('./ITC Avant Garde Gothic Std Extra Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Frutiger';
+  src: url('./Frutiger.ttf') format('truetype');
+}
 
-    <style>
-        @font-face {
-            font-family: 'ITC Avant Garde Gothic Std Extra Light';
-            src: url('./ITC Avant Garde Gothic Std Extra Light.otf') format('opentype');
-        }
-        @font-face {
-            font-family: 'Frutiger';
-            src: url('./Frutiger.ttf') format('truetype');
-        }
+body {
+  background-color: #050505;
+  color: #e0e0e0;
+  font-family: 'Frutiger', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 50px 20px;
+}
 
-        :root {
-            --bg-color: #050505;
-            --panel-bg: #111111;
-            --accent-pink: #ff0055;
-            --link-blue: #60a5fa;
-            --text-main: #e0e0e0;
-            --text-dim: #666;
-            --border-color: #222;
-        }
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Frutiger', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 50px 20px;
-            overflow-x: hidden;
-        }
+h1 {
+  font-family: 'ITC Avant Garde Gothic Std Extra Light', sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
 
-        .content-wrapper {
-            max-width: 850px;
-            margin: 0 auto;
-        }
+.aboutme {
+  background: #111;
+  border: 1px double #444;
+  padding: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
 
-        h1 {
-            font-family: 'ITC Avant Garde Gothic Std Extra Light', sans-serif;
-            text-align: center;
-            font-size: clamp(2rem, 8vw, 3.5rem); /* Fluid sizing */
-            color: #fff;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-        }
+.aboutme span {
+  padding: 0 10px;
+  border-right: 1px solid #333;
+}
 
-        .aboutme {
-            background: var(--panel-bg);
-            border: 1px double #444;
-            padding: 15px;
-            margin-bottom: 40px;
-            text-align: center;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-      
-        .bio-section {
-            margin-top: 40px;
-            padding: 20px 0;
-            border-top: 1px solid var(--border-color);
-        }
+.aboutme span:last-child {
+  border-right: none;
+}
 
-        .music-creds, .music-projects-text {
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            margin-top: 15px;
-            font-style: italic;
-        }
 
-        .link-grid {
-            margin-top: 40px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            background: #0a0a0a;
-            padding: 30px;
-            border: 1px solid var(--border-color);
-        }
+.align-left {
+  width: 250px;
+  height: auto;
+  border: 1px solid #333;
+}
 
-        .link-group h4 {
-            margin: 0 0 15px 0;
-            color: var(--accent-pink);
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
-        }
+.bio-section {
+  clear: both;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+}
 
-        .link-group a {
-            display: block;
-            color: var(--link-blue);
-            text-decoration: none;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-        }
+.link-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  background: #0a0a0a;
+  padding: 20px;
+  border: 1px solid #222;
+}
 
-        .link-group a:hover {
-            color: #fff;
-            padding-left: 5px; 
-        }
-      
-        details summary {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #fff;
-            color: #000;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
+.link-grid h4 {
+  margin: 0 0 10px 0;
+  color: #ff0055;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
 
-        details summary:hover {
-            background: var(--accent-pink);
-            color: #fff;
-        }
+.link-grid a {
+  display: block;
+  color: #60a5fa;
+  text-decoration: none;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
 
-        @media (max-width: 600px) {
-            body { padding: 30px 15px; }
-            .link-grid { grid-template-columns: 1fr 1fr; gap: 15px; padding: 15px; }
-        }
-    </style>
+.link-grid a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+
+details summary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+details summary:hover {
+  background: #ff0055;
+  color: #fff;
+}
+
+
+.music-creds, .music-projects {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 20px;
+}
+</style>
 </head>
 
 <body>
-<div class="content-wrapper animate__animated animate__fadeIn">
+<div class="content-wrapper">
 
-    <header>
-        <h1>In ways, she lives</h1>
-        <div class="aboutme">
-            I am a musician // my music is genrefluid
-        </div>
-    </header>
+<h1>In ways, she lives</h1>
+<div style=text-align: center, class="aboutme">
+  <span>I am a musician, my music is very genrefluid. </span>
+</div>
 
-    <section class="bio-section">
-        <p>I'm a furry and kemonomimi, transgender girl.</p>
+<div class="bio-section">
+  <p>I'm a furry and kemonomimi, transgender girl.</p>
 
-        <p class="music-creds">
-            <strong>Gear:</strong> Logic Pro // Roland Cloud SH-101, XV-5080 // Korg Electribe-R // U-He Diva // Valhalla Suite // Fab-Filter Pro-Q 4 & Saturn 2.
-        </p>
-        </p>
-    </section>
+  <p class="music-creds">
+    I use Logic Pro for my DAW, and I love the VSTs: Roland Cloud SH-101, Roland Cloud XV-5080, Korg Electribe-R, U-He Diva, ValhallaDelay, ValhallaVintageVerb, Fab-Filter Pro-Q 4, and Fab-Filter Saturn 2.
+  </p>
 
-    <div class="link-grid">
-        <div class="link-group">
-            <h4>Projects</h4>
-            <a href="https://geogaddi.org">Personal Website</a>
-            <a href="https://inwaysshelives.bandcamp.com">Bandcamp (Solo)</a>
-        </div>
+  <p class="music-projects">
+My current music projects are (you are here) In ways, she lives; a genrefluid solo project; it can go from IDM to Ambient to Shoegaze inspired to Instrumental Hip-Hop, and I js know about vampire queens; a two person collective with the fantastic mGardener/Jenny. It is also genrefluid.
+</p>
+</div>
 
-        <div class="link-group">
-            <h4>Profiles</h4>
-            <a href="https://music.apple.com/profile/icarustch">Apple Music</a>
-            <a href="https://rateyourmusic.com/~IcarusTCH">RateYourMusic</a>
-            <a href="https://discogs.com/user/icarustch">Discogs</a>
-            <a href="https://www.last.fm/user/icarustch">Last.fm</a>
-        </div>
+<div class="link-grid">
 
-        <div class="link-group">
-            <h4>Marcy</h4>
-            <a href="https://www.instagram.com/marceline_.vampirequeen">Instagram</a>
-            <a href="https://bsky.app/profile/vampirequeenmarcy.bsky.social">Bluesky</a>
-            <a href="https://www.tiktok.com/@marceline_.vampirequeen">TikTok</a>
-        </div>
+  <div>
+    <h4>Music Projects</h4>
+    <a href="https://geogaddi.org">Personal website)</a>
+    <a href="https://inwaysshelives.bandcamp.com">In ways, she lives (Bandcamp)</a>
+    <a href="https://ijsknowaboutvampirequeens.geogaddi.org">I js know about vampire queens (Domain)</a>
+    <a href="https://ijsknowaboutvampirequeens.bandcamp.com">I js know about vampire queens (Bandcamp)</a>
+  </div>
 
-        <div class="link-group">
-            <h4>IcarusTCH</h4>
-            <a href="https://bsky.app/profile/icarustch.bsky.social">Bluesky</a>
-            <a href="https://youtube.com/@IcarusTCH">YouTube</a>
-            <a href="https://github.com/icarustch">GitHub</a>
-            <a href="https://spacehey.com/icarustch">SpaceHey</a>
-        </div>
-    </div>
+  <div>
+    <h4>Music Profiles</h4>
+    <a href="https://music.apple.com/profile/icarustch">Apple Music</a>
+    <a href="https://rateyourmusic.com/~IcarusTCH">RateYourMusic</a>
+    <a href="https://discogs.com/user/icarustch">Discogs</a>
+    <a href="https://www.last.fm/user/icarustch">Last.fm</a>
+    <a href="https://bandcamp.com/icarustch">Bandcamp (Fan)</a>
+  </div>
+
+  <div>
+    <h4>Marcy</h4>
+    <a href="https://www.instagram.com/marceline_.vampirequeen">Instagram</a>
+    <a href="https://bsky.app/profile/vampirequeenmarcy.bsky.social">Bluesky</a>
+    <a href="https://www.tiktok.com/@marceline_.vampirequeen">TikTok</a>
+  </div>
+
+  <div>
+    <h4>IcarusTCH</h4>
+    <a href="https://www.instagram.com/icarustch/">Instagram</a>
+    <a href="https://bsky.app/profile/icarustch.bsky.social">Bluesky</a>
+    <a href="https://www.tiktok.com/@icarustch">TikTok</a>
+    <a href="https://twitter.com/icarustch">Twitter / X</a>
+    <a href="https://youtube.com/@IcarusTCH">YouTube</a>
+    <a href="https://github.com/icarustch">GitHub</a>
+    <a href="https://www.reddit.com/u/icarustch">Reddit</a>
+    <a href="https://spacehey.com/icarustch">SpaceHey</a>
+    <a href="https://www.twitch.tv/notactuallyfemtanyl">Twitch</a>
+  </div>
+
+</div>
 
 </div>
 </body>
